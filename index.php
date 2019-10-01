@@ -1,6 +1,7 @@
 <html>
  <head>
-  <title>PHP Test</title>
+  <title>Formstack Project</title>
+  <link rel="stylesheet" href="css/styles.css">
  </head>
  <body>
  <?php
@@ -18,9 +19,11 @@
         $password, 
         $db,
         $port
- );
+    );  
+?> 
+    <p id="title_header">Client Management Page</p>
 
-  echo '<p>Text</p>'; ?> 
-
+    <a href="create_invoice.php">Create a new invoice</p>
+    
  </body>
 </html>

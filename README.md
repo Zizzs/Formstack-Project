@@ -6,7 +6,7 @@
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage. Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_The application is a mock up of an invoice billing website. It allows the user to save an invoice by submitting the client name and amount owed to to a MYSQL database. _
 
 ## Setup/Installation Requirements
 
