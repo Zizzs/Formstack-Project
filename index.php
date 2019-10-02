@@ -23,7 +23,8 @@
 ?> 
     <p id="title_header">Client Management Page</p>
 
-    <a href="create_invoice.php">Create a new invoice</p>
-    
+    <a href="create_invoice.php">Create a new invoice</a><br>
+    <a href="view_invoices.php">View all invoices</a>
+
  </body>
 </html>
