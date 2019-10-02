@@ -43,7 +43,7 @@ if($result->num_rows > 0) {
         echo '<p>' . $created . '</p>';
         echo '<p>' . $modified . '</p>';
         echo '<p>' . $exported . '</p>';
-        echo '<p><a href="edit_invoice.php?name='. $name .'">Edit</a></p>';
+        echo '<p><a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a></p>';
 
         //echo '<p> Id: ' . $id . ' - Name: ' . $name . ' - Amount: ' . $amount . ' - Created: ' . $created . ' - Modified: ' . $modified . ' - Exported: ' . $exported . ' | <a href="edit_invoice.php?name='. $name .'">Edit</a></p>';
     }
@@ -55,7 +55,7 @@ mysqli_close($link);
 
         </div>
         <div>
-            <a href="index.php">Back</p>
+            <a href="index.php">Home</p>
         </div>
     </body>
 </html>

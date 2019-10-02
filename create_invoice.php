@@ -51,5 +51,5 @@ function save_invoice() {
 </div>
 
 <div>
-    <a href="index.php">Back</p>
+    <a href="index.php">Home</p>
 </div>
