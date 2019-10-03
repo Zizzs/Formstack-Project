@@ -1,37 +1,36 @@
 ## _Formstack Project_
 
-#### _A PHP/SQL based Web App , 10/1/2019_
+#### _A PHP based web app for managing invoices and documents , 10/1/2019_
 
 #### By _**Alex Williams**_
 
 ## Description
 
-_The application is a mock up of an invoice billing website. It allows the user to save an invoice by submitting the client name and amount owed to to a MYSQL database. _
+_The application is a mock up of an invoice billing website. It allows the user to save an invoice by submitting the client name and amount owed to to a MYSQL database. The application supports viewing all invoices from the database, with the ability of editing or deleting the invoice from the database. In addition, the user may expert individual invoice documents in the form of a CSV file._
 
 ## Setup/Installation Requirements
 
-- _This is a great place_
-- _to list setup instructions_
-- _in a simple_
-- _easy-to-understand_
-- _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+- _Create a MYSQL Database on your local host named formstack_project._
+- _Create a table named invoices_
+- _The table should have columns for id(primary key), name(varchar), created(datetime), modified(datetime), exported(datetime), and amount(int)._
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know? Outline any issues that would impact use of your application. Share any workarounds that are in place. }_
+_No Known Bugs_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns. Encourage them to contact you or make a contribution to the code.}_
+- _Alex Williams_
+- _512-913-4762_
+- _Zizzs17@gmail.com_
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+- _phpMyAdmin, MAMP, VSCode_
+- _PHP, CSS_
 
 ### License
 
-_{Determine the license under which this application can be used. See below for more details on licensing.}_
+_MIT License_
 
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2019 **_Alex Williams_**
