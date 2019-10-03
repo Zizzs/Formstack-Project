@@ -48,6 +48,10 @@ if($result->num_rows > 0) {
         $modified = $row['modified'];
         $exported = $row['exported'];
 
+        if($created === $exported) {
+            $exported = "No Exports";
+        };
+
         echo '<div class="all_invoice_div invoice_row_'.$row_num.'">';
         echo '<p>' . $id . '</p>';
         echo '<p>' . $name . '</p>';

@@ -46,14 +46,14 @@
 ?>
 
     <div>
-        <div>
+        <div id="edit_invoice_div">
             <form method="post" action="edit_invoice.php">
-                <label for="id"> ID: </label> <input readonly type="text" name="id" value=<?php echo $id ?>><br><br>
-                <label for="name">Client Name: </label><input type="text" name="name" value=<?php echo $name ?>><br><br>
-                <label for="amount">Amount In Dollars: </label><input type="number" name="amount" value=<?php echo $amount ?>><br><br>
-                <label for="created">Created: </label><span name="created"><?php echo $created ?></span><br><br>
-                <label for="modified">Modified: </label><span name="modified"><?php echo $modified ?></span><br><br>
-                <label for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
+                <label class="edit_label_text" for="id"> ID: </label> <input readonly type="text" name="id" value=<?php echo $id ?>><br><br>
+                <label class="edit_label_text" for="name">Client Name: </label><input type="text" name="name" value=<?php echo $name ?>><br><br>
+                <label class="edit_label_text" for="amount">Amount In Dollars: </label><input type="number" name="amount" value=<?php echo $amount ?>><br><br>
+                <label class="edit_label_text" for="created">Created: </label><span name="created"><?php echo $created ?></span><br><br>
+                <label class="edit_label_text" for="modified">Modified: </label><span name="modified"><?php echo $modified ?></span><br><br>
+                <label class="edit_label_text" for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
                 <input type="submit" name="submit" value="Submit">
                 <?php echo '<a href="delete_invoice.php?id='.$id.'">Delete</a>'; ?>
             </form>

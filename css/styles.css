@@ -98,6 +98,15 @@ body {
   font-size: 30px;
 }
 
+#edit_invoice_div {
+  margin-top: 75px;
+}
+
+.edit_label_text {
+  font-size: 20px;
+  margin-right: 25px;
+}
+
 hr {
   border-top: 2px solid black;
 }
