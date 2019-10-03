@@ -34,21 +34,25 @@
         edit_invoice($id, $new_name, $invoice_amount);
     }
 
+    if(isset($_POST['delete'])){
+        $id = $_POST["id"];
+        delete_invoice($id);
+    }
+
+    function delete_invoice($id){
+        include 'db.php';
+
+        $data = ["delete_invoice", $id];
+
+        DBQuery($data);
+    }
+
     function edit_invoice($id, $name, $amount) {
-        $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
+        include 'db.php';
 
-        if($link === false){
-            die("ERROR: Could not connect. " . mysqli_connect_error());
-        }
+        $data = ["edit_invoices", $name, $amount, $id];
 
-        $sql = "UPDATE invoices SET name=?, amount=?, modified=now() WHERE id=?";
-        echo $id;
-        $stmt = $link->prepare($sql);
-       
-        $stmt->bind_param("sii", $name, $amount, $id);
-        $stmt->execute();
-
-        header("Location: view_invoices.php");
+        DBQuery($data);
     }
 
 ?>
@@ -62,8 +66,7 @@
                 <label class="edit_label_text" for="created">Created: </label><span name="created"><?php echo $created ?></span><br><br>
                 <label class="edit_label_text" for="modified">Modified: </label><span name="modified"><?php echo $modified ?></span><br><br>
                 <label class="edit_label_text" for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
-                <input type="submit" name="submit" value="Submit">
-                <?php echo '<a href="delete_invoice.php?id='.$id.'">Delete</a>'; ?>
+                <input type="submit" name="submit" value="Submit"><input type="submit" name="delete" value="Delete">
                 <?php echo '<a href="create_csv.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'&page=view_edit">Create CSV</a>'; ?>
             </form>
         </div>

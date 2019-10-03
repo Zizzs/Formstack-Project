@@ -22,39 +22,18 @@ if(isset($_POST['submit'])){
 }
 
 function save_invoice() {
-
-    
     $name = $_POST["name"];
     $invoice_amount = $_POST["amount"];
 
-    $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
+    include 'db.php';
 
-    if($link === false){
-        die("ERROR: Could not connect. " . mysqli_connect_error());
-    }
+    $data = ["create_invoice", $name, $invoice_amount];
 
-    $sql = "insert into invoices
-        (name, created, modified, exported, amount) 
-        VALUES ( ? , now(), now(), now(), ? )";
-
-    $stmt = $link->prepare($sql);
-    $stmt->bind_param("si", $name, $invoice_amount);
-    $stmt->execute();
-
-    // if(mysqli_query($link, $sql)){
-    //     echo "Records inserted";
-    // } else {
-    //     echo "ERROR: Could not execute";
-    // }
-
-    mysqli_close($link);
-
-    header("Location: view_invoices.php");
+    DBQuery($data);
+    
 }
 
-
 ?>
-
 
         <div id="create_invoice_div">
         <p id="create_invoice_text">Create an Invoice</p>

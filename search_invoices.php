@@ -31,19 +31,14 @@
 
     if(isset($_POST['submit'])){
         $id = $_POST["id"];
-        view_invoice($id);
+        search_invoice($id);
     }
 
-    function view_invoice($id) {
-        $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
-
-        if($link === false){
-            die("ERROR: Could not connect. " . mysqli_connect_error());
-        }
-
-        $sql = "select * from invoices where id=".$id;
-
-        $result = $link->query($sql);
+    function search_invoice($id) {
+        include 'db.php';
+        
+        $data = ["search_invoices", $id];
+        $result = DBQuery($data); 
 
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()){
@@ -53,8 +48,6 @@
         } else {
             echo "Zero Results";
         }
-
-        $link->close();
     }
 
 

@@ -28,15 +28,12 @@
 $name = $_POST["name"];
 $invoice_amount = $_POST["amount"];
 
-$link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
+include 'db.php';
 
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
+$data = ["view_all_invoices"];
 
-$sql = "select * from invoices";
+$result = DBQuery($data);
 
-$result = $link->query($sql);
 
 $row_num = 1;
 if($result->num_rows > 0) {
