@@ -1,10 +1,5 @@
-<html>
- <head>
-  <title>Formstack Project</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
- </head>
- <body>
+<?php include "header.php"; ?>
+
     <div class="header_div">
         <a href="index.php"><img class="logo" src="assets\logo.png" alt="Logo"></a>
         <p class="header_text">Invoice Management Portal</p>
@@ -16,13 +11,4 @@
         <div><a class="menu_buttons" href="search_invoices.php">Search Invoices</a></div>
     </div>
 
-    <footer>
-            <div class="footer_text">
-                <span ><a href="index.php">Home</a> | </span>
-                <span ><a href="view_invoices.php">View Invoices</a> | </span> 
-                <span><a href="search_invoices.php">Search Invoices</a></span>
-            </div>
-    </footer>
-
- </body>
-</html>
+<?php include "footer.php"; ?>
