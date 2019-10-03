@@ -127,3 +127,7 @@ footer {
 .footer_text {
   margin-top: 15px;
 }
+
+a:hover {
+  color: #a8adad;
+}

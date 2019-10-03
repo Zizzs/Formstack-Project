@@ -85,9 +85,9 @@ mysqli_close($link);
 
         </div>
         <footer>
-            <span class="footer_text"><a href="index.php">Home</a></span>
-            <span><a href="view_invoices.php">View Invoices</span>
-            <span><a href="search_invoices.php">Search Invoices</span>
+            <span class="footer_text"><a href="index.php">Home</a></span> 
+            <span><a href="view_invoices.php">View Invoices</a></span> 
+            <span><a href="search_invoices.php">Search Invoices</a></span>
         </footer>
     </body>
 </html>
