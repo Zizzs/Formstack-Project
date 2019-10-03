@@ -11,9 +11,50 @@
         </div>
         <div class="header_bar"></div>
 
+        <div id="create_invoice_div">
+        <p id="create_invoice_text">Search By Id</p>
+            <form method="post" action="search_invoices.php">
+                <label for="id">Invoice Id: </label><input type="text" name="id"><br><br>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+
         <footer>
             <span class="footer_text"><a href="index.php">Home</a></span>
             <span><a href="view_invoices.php">View Invoices</span>
         </footer>
     </body>
 </html>
+
+<?php
+
+    if(isset($_POST['submit'])){
+        $id = $_POST["id"];
+        view_invoice($id);
+    }
+
+    function view_invoice($id) {
+        $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
+
+        if($link === false){
+            die("ERROR: Could not connect. " . mysqli_connect_error());
+        }
+
+        $sql = "select * from invoices where id=".$id;
+
+        $result = $link->query($sql);
+
+        if($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()){
+                //<a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a>
+                header("Location: edit_invoice.php?id=".$row['id']."&name=".$row['name']."&amount=".$row['amount']."&created=".$row['created']."&modified=".row['modified']."&exported=".$row['exported']);
+            };
+        } else {
+            echo "Zero Results";
+        }
+
+        $link->close();
+    }
+
+
+?>
