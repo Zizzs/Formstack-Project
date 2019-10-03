@@ -4,6 +4,11 @@
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
+        <div class="header_div">
+            <img class="logo" src="assets\logo.png" alt="Logo">
+            <p class="header_text">Invoice Management Portal</p>
+        </div>
+        <div class="header_bar"></div>
         <div id="all_invoice_div">
             <p>Id</p>
             <p>Name</p>

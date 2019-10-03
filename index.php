@@ -2,29 +2,18 @@
  <head>
   <title>Formstack Project</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
  </head>
  <body>
- <?php
-    $user = 'root';
-    $password = 'root';
-    $db = 'formstack_project';
-    $host = 'localhost';
-    $port = 8890;
- 
-    $link = mysqli_init();
-    $success = mysqli_real_connect(
-        $link, 
-        $host, 
-        $user, 
-        $password, 
-        $db,
-        $port
-    );  
-?> 
-    <p id="title_header">Client Management Page</p>
-
-    <a href="create_invoice.php">Create a new invoice</a><br>
-    <a href="view_invoices.php">View all invoices</a>
+    <div class="header_div">
+        <img class="logo" src="assets\logo.png" alt="Logo">
+        <p class="header_text">Invoice Management Portal</p>
+    </div>
+    <div class="header_bar"></div>
+    <div id="main_menu_div">
+        <a id="new_invoice_button" href="create_invoice.php">Create a new invoice</a>
+        <a id="all_invoice_button" href="view_invoices.php">View all invoices</a>
+    </div>
 
  </body>
 </html>

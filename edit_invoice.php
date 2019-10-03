@@ -2,8 +2,14 @@
     <head>
         <title>Formstack Project</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
     </head>
     <body>
+    <div class="header_div">
+        <img class="logo" src="assets\logo.png" alt="Logo">
+        <p class="header_text">Invoice Management Portal</p>
+    </div>
+    <div class="header_bar"></div>
 
 <?php
     $id = $_GET['id'];
@@ -17,7 +23,6 @@
         $id = $_POST["id"];
         $new_name = $_POST["name"];
         $invoice_amount = $_POST["amount"];
-        echo "" . $id . " " . $new_name . " " . $invoice_amount;
         edit_invoice($id, $new_name, $invoice_amount);
     }
 

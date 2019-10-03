@@ -1,3 +1,16 @@
+
+<html>
+    <head>
+        <title>Formstack Project</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+    <div class="header_div">
+        <img class="logo" src="assets\logo.png" alt="Logo">
+        <p class="header_text">Invoice Management Portal</p>
+    </div>
+    <div class="header_bar"></div>
 <?php
 
 $name = "";
@@ -40,16 +53,18 @@ function save_invoice() {
 
 ?>
 
-<p>Create an Invoice</p>
+        <p>Create an Invoice</p>
 
-<div>
-    <form method="post" action="create_invoice.php">
-        <label for="name">Client Name: </label><input type="text" name="name"><br>
-        <label for="amount">Invoice Amount In Dollars: </label><input type="text" name="amount"><br>
-        <input type="submit" name="submit" value="Submit">
-    </form>
-</div>
+        <div>
+            <form method="post" action="create_invoice.php">
+                <label for="name">Client Name: </label><input type="text" name="name"><br>
+                <label for="amount">Invoice Amount In Dollars: </label><input type="text" name="amount"><br>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
 
-<div>
-    <a href="index.php">Home</p>
-</div>
+        <div>
+            <a href="index.php">Home</p>
+        </div>
+    </body>
+</html>

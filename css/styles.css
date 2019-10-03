@@ -1,3 +1,7 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 #title_header {
   font-size: 20px;
 }
@@ -5,4 +9,59 @@
 #all_invoice_div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.logo {
+  width: 250px;
+}
+
+.header_div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.header_text {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.header_bar {
+  background-color: #33cccc;
+  width: 100%;
+  height: 25px;
+}
+
+#main_menu_div {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#new_invoice_button {
+  color: white;
+  font-size: 15px;
+  background-color: #0033cc;
+  border-radius: 10px;
+  padding: 25px;
+  margin-right: 150px;
+  box-shadow: 2px 2px 5px black;
+}
+
+#new_invoice_button:hover {
+  background-color: #0066ff;
+}
+
+#all_invoice_button {
+  color: white;
+  font-size: 15px;
+  background-color: #0033cc;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 2px 2px 5px black;
+}
+
+#all_invoice_button:hover {
+  background-color: #0066ff;
 }
