@@ -35,8 +35,8 @@ function save_invoice() {
 
 ?>
 
-        <div id="create_invoice_div">
         <p id="create_invoice_text">Create an Invoice</p>
+        <div id="create_invoice_div">
             <form method="post" action="create_invoice.php">
                 <label for="name">Client Name: </label><input type="text" name="name"><br><br>
                 <label for="amount">Invoice Amount In Dollars: </label><input type="text" name="amount"><br><br>

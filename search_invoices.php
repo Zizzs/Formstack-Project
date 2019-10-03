@@ -11,8 +11,8 @@
         </div>
         <div class="header_bar"></div>
 
-        <div id="create_invoice_div">
-        <p id="create_invoice_text">Search By Id</p>
+        <p id="search_invoice_text">Search By Id</p>
+        <div id="search_invoice_div">
             <form method="post" action="search_invoices.php">
                 <label for="id">Invoice Id: </label><input type="text" name="id"><br><br>
                 <input type="submit" name="submit" value="Submit">

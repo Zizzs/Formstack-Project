@@ -58,6 +58,9 @@
 ?>
 
     <div>
+        <div>
+            <p id="edit_invoice_title">Edit Invoice ID: <?php echo $id ?></p>
+        </div>
         <div id="edit_invoice_div">
             <form method="post" action="edit_invoice.php">
                 <label class="edit_label_text" for="id"> ID: </label> <input readonly type="text" name="id" value=<?php echo $id ?>><br><br>

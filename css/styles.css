@@ -93,15 +93,54 @@ body {
 }
 
 #create_invoice_div {
-  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 75px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #create_invoice_text {
-  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+}
+
+#search_invoice_div {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 75px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search_invoice_text {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
 }
 
 #edit_invoice_div {
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
   margin-top: 75px;
+  width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#edit_invoice_title {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
 }
 
 .edit_label_text {
