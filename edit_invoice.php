@@ -60,7 +60,7 @@
                 <label class="edit_label_text" for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
                 <input type="submit" name="submit" value="Submit">
                 <?php echo '<a href="delete_invoice.php?id='.$id.'">Delete</a>'; ?>
-                <?php echo '<a href="create_csv.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Export CSV File</a>'; ?>
+                <?php echo '<a href="create_csv.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'&page=view_edit">Create CSV</a>'; ?>
             </form>
         </div>
     </div>

@@ -60,7 +60,8 @@ if($result->num_rows > 0) {
         echo '<p>' . $modified . '</p>';
         echo '<p>' . $exported . '</p>';
         echo '<p><a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a> | ';
-        echo '<a href="delete_invoice.php?id='.$id.'">Delete</a></p>';
+        echo '<a href="delete_invoice.php?id='.$id.'">Delete</a> | ';
+        echo '<a href="create_csv.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'&page=view_all">Create CSV</a> </p> ';
         echo '</div>';
 
         if($row_num === 1) {
