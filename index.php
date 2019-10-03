@@ -11,12 +11,14 @@
     </div>
     <div class="header_bar"></div>
     <div id="main_menu_div">
-        <a id="new_invoice_button" href="create_invoice.php">Create a new invoice</a>
-        <a id="all_invoice_button" href="view_invoices.php">View all invoices</a>
+        <div><a class="menu_buttons" href="create_invoice.php">Create a new invoice</a></div>
+        <div><a class="menu_buttons" href="view_invoices.php">View all invoices</a></div>
+        <div><a class="menu_buttons" href="search_invoices.php">Search Invoices</a></div>
     </div>
 
     <footer>
-        <p class="footer_text"><a href="index.php">Home</a></p>
+        <span class="footer_text"><a href="index.php">Home</a></span>
+        <span><a href="view_invoices.php">View Invoices</span>
     </footer>
 
  </body>

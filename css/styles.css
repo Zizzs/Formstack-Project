@@ -16,7 +16,6 @@ body {
 }
 
 #all_invoice_div_parent {
-  margin-top: 50px;
   border: 1px solid black;
   border-radius: 4px;
   padding: 15px;
@@ -56,6 +55,8 @@ body {
 #main_menu_div {
   margin-top: 100px;
   text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 #new_invoice_button {
@@ -76,13 +77,14 @@ body {
   margin-bottom: 150px;
 }
 
-#all_invoice_button {
+.menu_buttons {
   color: white;
   font-size: 15px;
   background-color: #0033cc;
   border-radius: 10px;
   padding: 25px;
   box-shadow: 2px 2px 5px black;
+  width: 150px;
 }
 
 #all_invoice_button:hover {

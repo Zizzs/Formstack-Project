@@ -66,7 +66,8 @@ function save_invoice() {
         </div>
 
         <footer>
-            <p class="footer_text"><a href="index.php">Home</a></p>
+            <span class="footer_text"><a href="index.php">Home</a></span>
+            <span><a href="view_invoices.php">View Invoices</span>
         </footer>
     </body>
 </html>
