@@ -20,6 +20,8 @@ body {
   border: 1px solid black;
   border-radius: 4px;
   padding: 15px;
+  max-height: 550px;
+  overflow-y: scroll;
 }
 
 .invoice_row_0 {
@@ -53,7 +55,7 @@ body {
 }
 
 #main_menu_div {
-  margin-top: 50px;
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -71,6 +73,10 @@ body {
   background-color: #0066ff;
 }
 
+#new_invoice_button_view_page {
+  margin-bottom: 150px;
+}
+
 #all_invoice_button {
   color: white;
   font-size: 15px;
@@ -82,6 +88,14 @@ body {
 
 #all_invoice_button:hover {
   background-color: #0066ff;
+}
+
+#create_invoice_div {
+  margin-top: 50px;
+}
+
+#create_invoice_text {
+  font-size: 30px;
 }
 
 hr {

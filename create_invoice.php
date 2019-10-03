@@ -48,17 +48,19 @@ function save_invoice() {
     // }
 
     mysqli_close($link);
+
+    header("Location: view_invoices.php");
 }
 
 
 ?>
 
-        <p>Create an Invoice</p>
 
-        <div>
+        <div id="create_invoice_div">
+        <p id="create_invoice_text">Create an Invoice</p>
             <form method="post" action="create_invoice.php">
-                <label for="name">Client Name: </label><input type="text" name="name"><br>
-                <label for="amount">Invoice Amount In Dollars: </label><input type="text" name="amount"><br>
+                <label for="name">Client Name: </label><input type="text" name="name"><br><br>
+                <label for="amount">Invoice Amount In Dollars: </label><input type="text" name="amount"><br><br>
                 <input type="submit" name="submit" value="Submit">
             </form>
         </div>

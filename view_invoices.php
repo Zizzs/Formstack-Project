@@ -10,6 +10,7 @@
         </div>
         <div class="header_bar"></div>
         <div id="all_invoice_div_parent">
+        <a id="new_invoice_button_view_page" href="create_invoice.php">Create a new invoice</a>
         <div id="all_invoice_div_header" class="all_invoice_div">
             <p>Id</p>
             <p>Name</p>
@@ -54,7 +55,8 @@ if($result->num_rows > 0) {
         echo '<p>' . $created . '</p>';
         echo '<p>' . $modified . '</p>';
         echo '<p>' . $exported . '</p>';
-        echo '<p><a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a></p>';
+        echo '<p><a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a> | ';
+        echo '<a href="delete_invoice.php?id='.$id.'">Delete</a></p>';
         echo '</div>';
 
         if($row_num === 1) {

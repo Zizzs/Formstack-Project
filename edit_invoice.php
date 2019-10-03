@@ -26,11 +26,6 @@
         edit_invoice($id, $new_name, $invoice_amount);
     }
 
-    if(isset($_POST['delete'])){
-        $id = $_POST["id"];
-        delete_invoice($id);
-    }
-
     function edit_invoice($id, $name, $amount) {
         $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
 
@@ -48,23 +43,6 @@
         header("Location: view_invoices.php");
     }
 
-    function delete_invoice($id) {
-        $link = mysqli_connect("localhost", "root", "root", "formstack_project", 8890);
-    
-        if($link === false){
-            die("ERROR: Could not connect. " . mysqli_connect_error());
-        }
-    
-        $sql = "DELETE FROM invoices WHERE id=?";
-        $stmt = $link->prepare($sql);
-        
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-    
-        header("Location: view_invoices.php");
-    
-    }
-
 ?>
 
     <div>
@@ -76,7 +54,8 @@
                 <label for="created">Created: </label><span name="created"><?php echo $created ?></span><br><br>
                 <label for="modified">Modified: </label><span name="modified"><?php echo $modified ?></span><br><br>
                 <label for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
-                <input type="submit" name="submit" value="Submit"><input type="submit" name="delete" value="Delete">
+                <input type="submit" name="submit" value="Submit">
+                <?php echo '<a href="delete_invoice.php?id='.$id.'">Delete</a>'; ?>
             </form>
         </div>
     </div>
