@@ -23,6 +23,10 @@
         $exported = "No Exports";
     }
 
+    if($created === $modified) {
+        $modified = "Not Modified";
+    }
+
     if(isset($_POST['submit'])){
         $id = $_POST["id"];
         $new_name = $_POST["name"];
