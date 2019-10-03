@@ -51,6 +51,7 @@
             $stmt->bind_param("i", $data[1]);
 
             if($stmt->execute()){
+                $link->close();
                 header("Location: view_invoices.php");
             };
     
@@ -63,11 +64,12 @@
 
             $stmt = $link->prepare($sql);
             $stmt->bind_param("si", $data[1], $data[2]);
-            $stmt->execute();
+            if($stmt->execute()){
+                $link->close();
+                header("Location: view_invoices.php");
+            }
 
-            mysqli_close($link);
 
-            header("Location: view_invoices.php");
         }
     }
 

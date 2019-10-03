@@ -66,7 +66,7 @@
                 <label class="edit_label_text" for="created">Created: </label><span name="created"><?php echo $created ?></span><br><br>
                 <label class="edit_label_text" for="modified">Modified: </label><span name="modified"><?php echo $modified ?></span><br><br>
                 <label class="edit_label_text" for="exported">Exported: </label><span name="exported"><?php echo $exported ?></span><br><br>
-                <input type="submit" name="submit" value="Submit"><input type="submit" name="delete" value="Delete">
+                <input type="submit" name="submit" value="Submit"> | <input type="submit" name="delete" value="Delete"><br><br>
                 <?php echo '<a href="create_csv.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'&page=view_edit">Create CSV</a>'; ?>
             </form>
         </div>
@@ -75,9 +75,11 @@
 
 
     <footer>
-        <span class="footer_text"><a href="index.php">Home</a> | </span>
-        <span><a href="view_invoices.php">View Invoices</a> | </span>
-        <span><a href="search_invoices.php">Search Invoices</a></span>
+            <div class="footer_text">
+                <span ><a href="index.php">Home</a> | </span>
+                <span ><a href="view_invoices.php">View Invoices</a> | </span> 
+                <span><a href="search_invoices.php">Search Invoices</a></span>
+            </div>
     </footer>
 
     </body>
