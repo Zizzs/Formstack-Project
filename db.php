@@ -43,6 +43,7 @@
         }
 
         if($data[0] === "delete_invoice"){
+            
             $sql = "DELETE FROM invoices WHERE id=?";
 
             $stmt = $link->prepare($sql);

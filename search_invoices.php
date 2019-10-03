@@ -43,7 +43,7 @@
         if($result->num_rows > 0) {
             while($row = $result->fetch_assoc()){
                 //<a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a>
-                header("Location: edit_invoice.php?id=".$row['id']."&name=".$row['name']."&amount=".$row['amount']."&created=".$row['created']."&modified=".row['modified']."&exported=".$row['exported']);
+                header("Location: edit_invoice.php?id=".$row['id']."&name=".$row['name']."&amount=".$row['amount']."&created=".$row['created']."&modified=".$row['modified']."&exported=".$row['exported']);
             };
         } else {
             echo "Zero Results";
