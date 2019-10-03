@@ -6,7 +6,7 @@
     </head>
     <body>
     <div class="header_div">
-        <img class="logo" src="assets\logo.png" alt="Logo">
+        <a href="index.php"><img class="logo" src="assets\logo.png" alt="Logo"></a>
         <p class="header_text">Invoice Management Portal</p>
     </div>
     <div class="header_bar"></div>
@@ -83,9 +83,9 @@
 
 
 
-    <div>
-        <a href="index.php">Home</p>
-    </div>
+    <footer>
+        <p class="footer_text"><a href="index.php">Home</a></p>
+    </footer>
 
     </body>
 </html>

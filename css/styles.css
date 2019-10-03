@@ -6,9 +6,24 @@ body {
   font-size: 20px;
 }
 
-#all_invoice_div {
+.all_invoice_div {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#all_invoice_div_header {
+  margin-top: 50px;
+}
+
+#all_invoice_div_parent {
+  margin-top: 50px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.invoice_row_0 {
+  background-color: #ccffee;
 }
 
 .logo {
@@ -30,6 +45,9 @@ body {
 
 .header_bar {
   background-color: #33cccc;
+  position: fixed;
+  display: block;
+  left: 0;
   width: 100%;
   height: 25px;
 }
@@ -64,4 +82,23 @@ body {
 
 #all_invoice_button:hover {
   background-color: #0066ff;
+}
+
+hr {
+  border-top: 2px solid black;
+}
+
+footer {
+  display: block;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #33cccc;
+  text-align: center;
+}
+
+.footer_text {
+  margin-top: 15px;
 }

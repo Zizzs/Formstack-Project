@@ -5,11 +5,12 @@
     </head>
     <body>
         <div class="header_div">
-            <img class="logo" src="assets\logo.png" alt="Logo">
+            <a href="index.php"><img class="logo" src="assets\logo.png" alt="Logo"></a>
             <p class="header_text">Invoice Management Portal</p>
         </div>
         <div class="header_bar"></div>
-        <div id="all_invoice_div">
+        <div id="all_invoice_div_parent">
+        <div id="all_invoice_div_header" class="all_invoice_div">
             <p>Id</p>
             <p>Name</p>
             <p>Amount</p>
@@ -17,6 +18,8 @@
             <p>Modified</p>
             <p>Exported</p>
             <p>Tools</p>
+        </div> 
+        <hr>
             
 <?php
 
@@ -33,7 +36,9 @@ $sql = "select * from invoices";
 
 $result = $link->query($sql);
 
+$row_num = 1;
 if($result->num_rows > 0) {
+    
     while($row = $result->fetch_assoc()) {
         $id = $row['id'];
         $name = $row['name'];
@@ -42,6 +47,7 @@ if($result->num_rows > 0) {
         $modified = $row['modified'];
         $exported = $row['exported'];
 
+        echo '<div class="all_invoice_div invoice_row_'.$row_num.'">';
         echo '<p>' . $id . '</p>';
         echo '<p>' . $name . '</p>';
         echo '<p>' . $amount . '</p>';
@@ -49,8 +55,13 @@ if($result->num_rows > 0) {
         echo '<p>' . $modified . '</p>';
         echo '<p>' . $exported . '</p>';
         echo '<p><a href="edit_invoice.php?id='.$id.'&name='.$name.'&amount='.$amount.'&created='.$created.'&modified='.$modified.'&exported='.$exported.'">Edit</a></p>';
+        echo '</div>';
 
-        //echo '<p> Id: ' . $id . ' - Name: ' . $name . ' - Amount: ' . $amount . ' - Created: ' . $created . ' - Modified: ' . $modified . ' - Exported: ' . $exported . ' | <a href="edit_invoice.php?name='. $name .'">Edit</a></p>';
+        if($row_num === 1) {
+            $row_num = 0;
+        } else {
+            $row_num = 1;
+        }
     }
 }
 
@@ -59,8 +70,10 @@ mysqli_close($link);
 ?>
 
         </div>
-        <div>
-            <a href="index.php">Home</p>
+
         </div>
+        <footer>
+            <p class="footer_text"><a href="index.php">Home</a></p>
+        </footer>
     </body>
 </html>
